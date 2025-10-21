@@ -455,8 +455,7 @@ body {
   }
 
   .main-content {
-    justify-content: flex-start;
-    /* Stack specs from the top instead of centering */
+    justify-content: flex-start;  /* Stack specs from the top instead of centering */
   }
 }
 
@@ -556,46 +555,6 @@ body {
   }
 
   .main-content {
-    justify-content: flex-start;
-    /* Stack specs from the top instead of centering */
+    justify-content: flex-start;  /* Stack specs from the top instead of centering */
   }
-
-  /* --- FINAL MOBILE FIX: Show all specs and buttons below --- */
-  @media (max-width: 768px) {
-
-    html,
-    body {
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-
-    .hero-section {
-      min-height: auto !important;
-      height: auto !important;
-      display: block !important;
-      padding-bottom: 80px;
-      /* add space for buttons */
-    }
-
-    .left-content,
-    .right-content {
-      height: auto !important;
-      min-height: auto !important;
-    }
-
-    .main-content {
-      justify-content: flex-start !important;
-    }
-
-    .specs-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem !important;
-    }
-
-    .cta-buttons {
-      position: relative !important;
-      margin-top: 2rem !important;
-    }
-  }
-
 }
