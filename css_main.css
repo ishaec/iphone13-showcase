@@ -76,18 +76,18 @@ body {
 /* HERO SECTION */
 .hero-section {
   min-height: 100vh;
-  padding: 60px 0 20px;
+  padding: 80px 0 40px;
   display: flex;
   align-items: center;
 }
 
 /* LEFT CONTENT */
 .left-content {
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: calc(100vh - 80px);
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
 .content-wrapper {
@@ -95,7 +95,7 @@ body {
 }
 
 .title-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .left-content h1 {
@@ -121,19 +121,11 @@ body {
 .left-content .lead {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: #ccc;
-  margin-bottom: 0;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 .features-container {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* SPECS GRID */
@@ -141,7 +133,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .spec-item {
@@ -206,8 +198,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: calc(100vh - 80px);
-  padding: 0;
+  min-height: 100vh;
+  padding: 2rem 0;
 }
 
 .iphone-mockup-wrapper {
@@ -271,7 +263,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: 2rem;
   position: relative;
   z-index: 10;
   padding-top: 1rem;
@@ -364,7 +356,7 @@ body {
   animation: glowPulse 2s ease-in-out infinite;
 }
 
-/* RESPONSIVE DESIGN - FIXED FOR MOBILE */
+/* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
   .iphone-mockup {
     max-width: 460px;
@@ -373,22 +365,17 @@ body {
 
 @media (max-width: 992px) {
   .hero-section {
-    padding: 60px 0 15px;
-    height: auto;
-    min-height: 100vh;
+    padding: 80px 0 30px;
   }
 
   .left-content {
-    padding: 1rem;
-    height: auto;
+    padding: 1.5rem;
     min-height: auto;
-    justify-content: flex-start;
   }
 
   .right-content {
-    height: auto;
-    min-height: 40vh;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    min-height: 50vh;
   }
 
   .iphone-mockup {
@@ -407,30 +394,20 @@ body {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 70px 0 20px;
-    height: auto;
-    min-height: 100vh;
+    padding: 80px 0 20px;
     display: block;
-  }
-
-  .container-fluid.h-100 {
-    height: auto !important;
-  }
-
-  .row.h-100 {
-    height: auto !important;
+    height: auto;
   }
 
   .left-content {
-    padding: 0.5rem;
-    height: auto !important;
-    min-height: auto !important;
+    padding: 1rem;
+    height: auto;
   }
 
   .right-content {
-    height: auto !important;
-    min-height: 40vh !important;
     padding: 1rem 0;
+    height: auto;
+    min-height: 40vh;
   }
 
   .left-content h1 {
@@ -444,7 +421,6 @@ body {
   .cta-buttons {
     justify-content: center;
     margin-top: 2rem;
-    position: relative;
   }
 
   .iphone-mockup {
@@ -459,20 +435,11 @@ body {
   .dot {
     display: none;
   }
-
-  .spec-item {
-    min-height: 100px;
-    padding: 1rem;
-  }
-
-  .main-content {
-    padding: 0.5rem 0;
-  }
 }
 
 @media (max-width: 576px) {
   .left-content {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
 
   .iphone-mockup {
@@ -487,13 +454,13 @@ body {
   }
 
   .spec-item {
-    padding: 0.8rem;
-    min-height: 90px;
+    padding: 1rem;
+    min-height: 100px;
   }
 
   .spec-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
   }
 }
