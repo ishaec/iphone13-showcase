@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -332,25 +333,19 @@ body {
 
 /* ANIMATIONS */
 @keyframes floatGentle {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
-
   50% {
     transform: translateY(-20px) rotate(2deg);
   }
 }
 
 @keyframes floatDot {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px) scale(1);
     opacity: 0.3;
   }
-
   50% {
     transform: translateY(-20px) scale(1.1);
     opacity: 0.6;
@@ -358,12 +353,9 @@ body {
 }
 
 @keyframes glowPulse {
-
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
   }
-
   50% {
     box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
   }
@@ -413,10 +405,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .left-content h1 {
-    text-align: center;
-  }
-
+  .left-content h1,
   .left-content .lead {
     text-align: center;
   }
@@ -434,28 +423,20 @@ body {
     gap: 0.8rem;
   }
 
-  .dot {
-    display: none;
-  }
-
-  /* MOBILE FIXES: Allow natural height, top-align content, and prevent centering issues */
   .hero-section {
     align-items: flex-start;
     min-height: auto;
   }
 
-  .left-content {
-    min-height: auto;
+  .left-content,
+  .right-content,
+  .main-content {
     height: auto;
-  }
-
-  .right-content {
     min-height: auto;
-    height: auto;
   }
 
   .main-content {
-    justify-content: flex-start;  /* Stack specs from the top instead of centering */
+    justify-content: flex-start;
   }
 }
 
@@ -485,76 +466,36 @@ body {
     height: 45px;
     font-size: 1.4rem;
   }
+}
 
-  @media (max-width: 768px) {
-    .left-content {
-      height: auto;
-      min-height: auto;
-      justify-content: flex-start;
-      padding: 0.5rem;
-    }
-
-    .specs-grid {
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .spec-item {
-      min-height: 90px;
-      padding: 1rem;
-    }
-
-    .main-content {
-      padding: 0.5rem 0;
-    }
-
-    .cta-buttons {
-      margin-top: 1rem;
-      position: static;
-    }
+/* ✅ FINAL MOBILE SCROLL FIX */
+@media (max-width: 768px) {
+  html, body {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto !important;
   }
 
-  @media (max-width: 576px) {
-    .hero-section {
-      padding: 70px 0 10px;
-      min-height: 100vh;
-      height: auto;
-    }
-
-    .left-content {
-      padding: 0.5rem;
-    }
-
-    .spec-item {
-      min-height: 80px;
-      padding: 0.8rem;
-    }
-
-    .spec-icon {
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
-    }
-  }
-
-  /* MOBILE FIXES: Allow natural height, top-align content, and prevent centering issues */
   .hero-section {
-    align-items: flex-start;
-    min-height: auto;
+    height: auto !important;
+    min-height: 100vh;
+    display: block !important;
   }
 
-  .left-content {
-    min-height: auto;
-    height: auto;
-  }
-
+  .left-content,
   .right-content {
-    min-height: auto;
-    height: auto;
+    height: auto !important;
+    display: block !important;
   }
 
   .main-content {
-    justify-content: flex-start;  /* Stack specs from the top instead of centering */
+    height: auto !important;
+    display: block !important;
+    justify-content: flex-start !important;
+  }
+
+  .cta-buttons {
+    margin-bottom: 2rem;
   }
 }
