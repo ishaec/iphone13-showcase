@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone 13 Pink Showcase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css_main.css" />
+  <link rel="stylesheet" href="animate.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Apple Logo" class="apple-logo me-2">
+        <span class="brand-text">iPhone 13</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container-fluid h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6 col-md-12 left-content order-2 order-lg-1">
+          <div class="content-wrapper">
+            <div class="title-section">
+              <h1 class="display-4 fw-bold mb-2 animated fadeInUp" data-aos="fade-right">
+                <span class="iphone-title">iPhone 13 </span>
+                <span class="pink-text">Pink</span>
+              </h1>
+              <p class="lead mb-4 animated fadeInUp delay-1s" data-aos="fade-right" data-aos-delay="100">
+                The perfect shade of powerful.
+              </p>
+            </div>
+
+            <div class="features-container">
+              <div class="specs-grid">
+                <div class="spec-item animated fadeInUp delay-2s" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="spec-icon">
+                    <i class="fas fa-microchip"></i>
+                  </div>
+                  <h4>A15 Bionic Chip</h4>
+                  <p>Fastest smartphone chip</p>
+                </div>
+                <div class="spec-item animated fadeInUp delay-3s" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="spec-icon">
+                    <i class="fas fa-desktop"></i>
+                  </div>
+                  <h4>Super Retina XDR</h4>
+                  <p>Brighter, more vibrant display</p>
+                </div>
+                <div class="spec-item animated fadeInUp delay-4s" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="spec-icon">
+                    <i class="fas fa-camera"></i>
+                  </div>
+                  <h4>Dual-Camera System</h4>
+                  <p>Advanced computational photography</p>
+                </div>
+                <div class="spec-item animated fadeInUp delay-5s" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="spec-icon">
+                    <i class="fas fa-battery-full"></i>
+                  </div>
+                  <h4>All-Day Battery</h4>
+                  <p>Up to 2.5 hours more battery life</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-buttons mt-4 animated fadeInUp delay-6s" data-aos="fade-up" data-aos-delay="600">
+              <a href="https://www.apple.com/iphone-13/" class="btn btn-light btn-lg glowPulse me-3" target="_blank">
+                Learn More
+              </a>
+              <a href="https://www.apple.com/shop/buy-iphone/iphone-13" class="btn btn-outline-light btn-lg" target="_blank">
+                Buy Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 right-content order-1 order-lg-2">
+          <div class="iphone-mockup-wrapper">
+            <img src="iphone13.png" alt="iPhone 13 Pink" class="iphone-mockup">
+          </div>
+          <div class="floating-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 100
+    });
+
+    const iphoneMockup = document.querySelector('.iphone-mockup-wrapper');
+
+    document.addEventListener('mousemove', (e) => {
+      const { clientX: x, clientY: y } = e;
+      const { innerWidth: width, innerHeight: height } = window;
+
+      const rotateY = ((x - width / 2) / width) * 25;
+      const rotateX = -((y - height / 2) / height) * 15;
+
+      iphoneMockup.style.transform = `
+        rotateY(${rotateY}deg) 
+        rotateX(${rotateX}deg)
+        perspective(1000px)
+      `;
+    });
+
+    document.addEventListener('mouseleave', () => {
+      iphoneMockup.style.transform = 'rotateY(0deg) rotateX(0deg) perspective(1000px)';
+    });
+
+    iphoneMockup.addEventListener('mouseenter', () => {
+      iphoneMockup.style.cursor = 'grab';
+    });
+
+    iphoneMockup.addEventListener('mousedown', () => {
+      iphoneMockup.style.cursor = 'grabbing';
+    });
+
+    iphoneMockup.addEventListener('mouseup', () => {
+      iphoneMockup.style.cursor = 'grab';
+    });
+  </script>
+</body>
+</html>
