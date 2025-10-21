@@ -437,6 +437,12 @@ body {
   .dot {
     display: none;
   }
+
+  /* MOBILE FIX: Align content to top and allow natural height for scrollability */
+  .hero-section {
+    align-items: flex-start;
+    min-height: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -516,5 +522,11 @@ body {
       height: 40px;
       font-size: 1.2rem;
     }
+  }
+
+  /* MOBILE FIX: Align content to top and allow natural height for scrollability */
+  .hero-section {
+    align-items: flex-start;
+    min-height: auto;
   }
 }
