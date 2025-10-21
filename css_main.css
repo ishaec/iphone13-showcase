@@ -364,7 +364,7 @@ body {
   animation: glowPulse 2s ease-in-out infinite;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN - FIXED FOR MOBILE */
 @media (max-width: 1200px) {
   .iphone-mockup {
     max-width: 460px;
@@ -374,18 +374,20 @@ body {
 @media (max-width: 992px) {
   .hero-section {
     padding: 60px 0 15px;
+    height: auto;
+    min-height: 100vh;
   }
 
   .left-content {
     padding: 1rem;
     height: auto;
-    min-height: 55vh;
+    min-height: auto;
     justify-content: flex-start;
   }
 
   .right-content {
     height: auto;
-    min-height: 45vh;
+    min-height: 40vh;
     padding: 1rem 0;
   }
 
@@ -404,6 +406,33 @@ body {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 70px 0 20px;
+    height: auto;
+    min-height: 100vh;
+    display: block;
+  }
+
+  .container-fluid.h-100 {
+    height: auto !important;
+  }
+
+  .row.h-100 {
+    height: auto !important;
+  }
+
+  .left-content {
+    padding: 0.5rem;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .right-content {
+    height: auto !important;
+    min-height: 40vh !important;
+    padding: 1rem 0;
+  }
+
   .left-content h1 {
     text-align: center;
   }
@@ -414,6 +443,8 @@ body {
 
   .cta-buttons {
     justify-content: center;
+    margin-top: 2rem;
+    position: relative;
   }
 
   .iphone-mockup {
@@ -429,18 +460,6 @@ body {
     display: none;
   }
 
-  /* FIX FOR MOBILE HEIGHT */
-  .hero-section {
-    height: auto;
-    min-height: 100vh;
-  }
-
-  .left-content {
-    height: auto !important;
-    min-height: auto !important;
-    justify-content: flex-start;
-  }
-
   .spec-item {
     min-height: 100px;
     padding: 1rem;
@@ -448,11 +467,6 @@ body {
 
   .main-content {
     padding: 0.5rem 0;
-  }
-
-  .cta-buttons {
-    margin-top: 1.5rem;
-    position: relative;
   }
 }
 
