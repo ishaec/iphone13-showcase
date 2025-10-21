@@ -438,10 +438,24 @@ body {
     display: none;
   }
 
-  /* MOBILE FIX: Align content to top and allow natural height for scrollability */
+  /* MOBILE FIXES: Allow natural height, top-align content, and prevent centering issues */
   .hero-section {
     align-items: flex-start;
     min-height: auto;
+  }
+
+  .left-content {
+    min-height: auto;
+    height: auto;
+  }
+
+  .right-content {
+    min-height: auto;
+    height: auto;
+  }
+
+  .main-content {
+    justify-content: flex-start;  /* Stack specs from the top instead of centering */
   }
 }
 
@@ -524,9 +538,23 @@ body {
     }
   }
 
-  /* MOBILE FIX: Align content to top and allow natural height for scrollability */
+  /* MOBILE FIXES: Allow natural height, top-align content, and prevent centering issues */
   .hero-section {
     align-items: flex-start;
     min-height: auto;
+  }
+
+  .left-content {
+    min-height: auto;
+    height: auto;
+  }
+
+  .right-content {
+    min-height: auto;
+    height: auto;
+  }
+
+  .main-content {
+    justify-content: flex-start;  /* Stack specs from the top instead of centering */
   }
 }
