@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -458,5 +459,24 @@ body {
     width: 45px;
     height: 45px;
     font-size: 1.4rem;
+  }
+}
+
+/* ✅ FIX FOR MOBILE SCROLL ISSUE */
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .hero-section {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .left-content, 
+  .right-content {
+    height: auto;
   }
 }
