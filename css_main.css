@@ -77,8 +77,6 @@ body {
 .hero-section {
   min-height: 100vh;
   padding: 80px 0 40px;
-  display: flex;
-  align-items: center;
 }
 
 /* LEFT CONTENT */
@@ -86,8 +84,6 @@ body {
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
 }
 
 .content-wrapper {
@@ -198,8 +194,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 100vh;
   padding: 2rem 0;
+  min-height: 60vh;
 }
 
 .iphone-mockup-wrapper {
@@ -370,7 +366,6 @@ body {
 
   .left-content {
     padding: 1.5rem;
-    min-height: auto;
   }
 
   .right-content {
@@ -397,6 +392,7 @@ body {
     padding: 80px 0 20px;
     display: block;
     height: auto;
+    min-height: auto;
   }
 
   .left-content {
